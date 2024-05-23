@@ -30,10 +30,10 @@ export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-[--whiteGray] dark:bg-gray-900">
+    <header className="fixed inset-x-0 top-0 z-50">
       {/* Navbar */}
       <nav
-        className="flex items-center justify-between p-4 lg:px-8 bg-[--mediumGreen] dark:bg-gray-800 rounded-3xl m-8"
+        className="flex items-center justify-between p-4 lg:px-8 bg-[--bgnavbar] rounded-3xl m-6"
         aria-label="Global"
       >
         {/* Logo*/}
@@ -52,7 +52,7 @@ export default function NavBar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[--whiteGray]"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-[--textMenu]"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -67,22 +67,22 @@ export default function NavBar() {
               <Disclosure as="div" key={item.name} className="relative">
                 {({ open }) => (
                   <>
-                    <DisclosureButton className="flex items-center text-md font-semibold leading-6 text-[--whiteGray]">
+                    <DisclosureButton className="flex items-center text-md font-semibold leading-6 text-[--textPrimary] hover:text-[--textPrimary]">
                       {item.name}
                       <ChevronDownIcon
-                        className={`ml-2 h-5 w-5 transition-transform ${
+                        className={`ml-2 h-5 w-5 transition-transform
                           open ? "rotate-180" : ""
                         }`}
                         aria-hidden="true"
                       />
                     </DisclosureButton>
-                    <DisclosurePanel className="absolute left-0 mt-2 w-40 rounded-md bg-gray-800 shadow-lg ring-1 ring-[--whiteGray] ring-opacity-5">
+                    <DisclosurePanel className="absolute left-0 mt-2 w-40 rounded-md bg-[--bgPrimary] shadow-lg ring-1 ring-[--accent] ring-opacity-10">
                       <div className="py-1">
                         {item.subItems.map((subItem) => (
                           <a
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm dark:text-[--whiteGray] hover:text-[--mediumGreen] dark:hover:bg-[--softGray]"
+                            className="block px-4 py-2 text-sm text-[--textPrimary] hover:text-[--textHoverMenu] hover:bg-[--accent]"
                           >
                             {subItem.name}
                           </a>
@@ -96,7 +96,7 @@ export default function NavBar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-md font-semibold leading-6 text-[--whiteGray]"
+                className="text-md font-semibold leading-6 text-[--textPrimary] hover:text-[--textPrimary]"
               >
                 {item.name}
               </a>
@@ -117,7 +117,7 @@ export default function NavBar() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[--whiteGray] dark:bg-gray-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-[--darkGreen]">
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[--bgnavbar] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-[--accent]">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Calbamerica</span>
@@ -131,7 +131,7 @@ export default function NavBar() {
             {/* Mobile Menu Button */}
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-[--mediumGreen]"
+              className="-m-2.5 rounded-md p-2.5 text-[--textMenu]"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
@@ -141,14 +141,14 @@ export default function NavBar() {
 
           {/* Mobile Menu */}
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-[--mediumGreen]">
+            <div className="-my-6 divide-y divide-[--accent]">
               <div className="space-y-2 py-6">
                 {navigation.map((item) =>
                   item.subItems ? (
                     <Disclosure as="div" key={item.name} className="relative">
                       {({ open }) => (
                         <>
-                          <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-2 px-3 text-sm font-semibold leading-7 dark:text-[--whiteGray] hover:text-[--mediumGreen] dark:hover:bg-[--softGray]">
+                          <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-2 px-3 text-sm font-semibold leading-7 hover:bg-[--bgPrimary] text-[--textPrimary] hover:text-[--textHover]">
                             {item.name}
                             <ChevronDownIcon
                               className={`ml-2 h-5 w-5 transition-transform ${
@@ -162,7 +162,7 @@ export default function NavBar() {
                               <a
                                 key={subItem.name}
                                 href={subItem.href}
-                                className="block rounded-lg px-3 py-2 text-sm font-semibold leading-7 dark:text-[--whiteGray] hover:text-[--mediumGreen] dark:hover:bg-[--softGray]"
+                                className="block rounded-lg px-3 py-2 text-sm font-semibold leading-7 hover:bg-[--bgPrimary] text-[--textPrimary] hover:text-[--textHover]"
                               >
                                 {subItem.name}
                               </a>
@@ -175,7 +175,7 @@ export default function NavBar() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 dark:text-[--whiteGray] hover:text-[--mediumGreen] dark:hover:bg-[--softGray]"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-[--textPrimary] hover:bg-[--bgPrimary] hover:text-[--textHover]"
                     >
                       {item.name}
                     </a>
