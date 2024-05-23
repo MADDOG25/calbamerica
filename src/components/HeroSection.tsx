@@ -1,4 +1,4 @@
-import "../variables.css";
+import React from "react";
 import NavBar from "./UI/NavBar";
 
 export default function HeroSection() {

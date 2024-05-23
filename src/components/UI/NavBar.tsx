@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React from "react";
+import { useState } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -8,6 +9,7 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import { Switch } from "./SwitchMode";
 
 const navigation = [
   { name: "Inicio", href: "#" },
@@ -26,15 +28,6 @@ const navigation = [
 
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-[--whiteGray] dark:bg-gray-900">
@@ -111,14 +104,9 @@ export default function NavBar() {
           )}
         </div>
 
-        {/* Dark Mode */}
+        {/* Dark Mode Desktop */}
         <div className="hidden lg:flex lg:items-center lg:justify-end lg:gap-x-6">
-          <button
-            className="text-md font-semibold leading-6 text-[--whiteGray]"
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            {darkMode ? "Light Mode" : "Dark Mode"}
-          </button>
+          <Switch />
         </div>
       </nav>
 
@@ -197,12 +185,7 @@ export default function NavBar() {
 
               {/* Dark Mode Mobile */}
               <div className="py-6">
-                <button
-                  className="w-full text-left px-3 py-2 text-sm font-semibold leading-7 text-gray-900 dark:text-gray-100 hover:bg-[--softGray] dark:hover:bg-gray-700"
-                  onClick={() => setDarkMode(!darkMode)}
-                >
-                  {darkMode ? "Light Mode" : "Dark Mode"}
-                </button>
+                <Switch />
               </div>
             </div>
           </div>
