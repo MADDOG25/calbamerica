@@ -1,5 +1,5 @@
 import React from "react";
-import Flags from "./UI/Flags";
+import FlagsCont from "./UI/FlagsCont";
 
 export default function PartnersSection() {
   return (
@@ -13,7 +13,7 @@ export default function PartnersSection() {
           nuestros asociados.
         </p>
         {/* Contenedor de Imagenes */}
-        <Flags />
+        <FlagsCont />
       </div>
     </div>
   );

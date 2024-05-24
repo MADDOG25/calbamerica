@@ -84,23 +84,24 @@ function OpenFullscreenSvg() {
   );
 }
 
-function Flags() {
+export default function FlagsAr() {
   const [isCardExpanded, setIsCardExpanded] = useState(false);
 
   return (
-    <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+    <div className="mx-auto mt-12 grid max-w-lg grid-cols-1 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       <MagicCard
         isCardExpanded={isCardExpanded}
         onBackgroundFadeClick={() => setIsCardExpanded(false)}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
       >
+        {/* Contenedor */}
         <div
           style={{
-            width: isCardExpanded ? "40rem" : "17rem",
-            gap: "1rem",
+            width: isCardExpanded ? "20rem" : "16rem",
+            gap: "2rem",
             display: "flex",
             flexDirection: "column",
-            padding: "1.35rem 0",
+            padding: "1.8rem 0.5rem",
             color: isCardExpanded ? "white" : "currentColor",
           }}
         >
@@ -117,9 +118,10 @@ function Flags() {
                 fontSize: "1.4em",
               }}
             >
-              Bandera de Colombia
+              Asociado Argentina
             </h3>
 
+            {/* Icono expandido */}
             <button
               style={{ position: "absolute", right: 0, zIndex: 9999 }}
               onClick={() => setIsCardExpanded(!isCardExpanded)}
@@ -132,54 +134,61 @@ function Flags() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                {isCardExpanded ? <CloseFullscreenSvg /> : <OpenFullscreenSvg />}
+                {isCardExpanded ? (
+                  <CloseFullscreenSvg />
+                ) : (
+                  <OpenFullscreenSvg />
+                )}
               </svg>
             </button>
           </div>
+          {/* Contenedor flags */}
           <div style={{ overflowY: "auto" }}>
             <img
               style={{
-                width: isCardExpanded ? "24rem" : "17.5rem",
+                width: isCardExpanded ? "24rem" : "16rem",
                 height: "auto",
               }}
-              alt="Colombia Flag"
-              src="./colombiaFlag.svg"
+              alt="Argentina Flag"
+              src="./argentinaFlag.svg"
             />
             {isCardExpanded && (
               <section
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "1rem",
+                  gap: "1.5rem",
+                  marginTop: "1.5rem",
                 }}
               >
+                {/* Imagenes de flags */}
                 <img
                   className="max-h-12 w-full object-contain"
                   src="./chileFlag.svg"
                   alt="Chile Flag"
-                  width={170}
-                  height={52}
+                  width={180}
+                  height={60}
                 />
                 <img
                   className="max-h-12 w-full object-contain"
                   src="./argentinaFlag.svg"
                   alt="Argentina Flag"
-                  width={170}
-                  height={52}
+                  width={180}
+                  height={60}
                 />
                 <img
                   className="max-h-12 w-full object-contain"
                   src="./costaricaFlag.svg"
                   alt="Costa Rica Flag"
-                  width={170}
-                  height={52}
+                  width={180}
+                  height={60}
                 />
                 <img
                   className="max-h-12 w-full object-contain"
                   src="./brazilFlag.svg"
                   alt="Brazil Flag"
-                  width={170}
-                  height={52}
+                  width={180}
+                  height={60}
                 />
               </section>
             )}
@@ -189,5 +198,3 @@ function Flags() {
     </div>
   );
 }
-
-export default Flags;
