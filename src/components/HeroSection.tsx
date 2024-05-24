@@ -10,10 +10,10 @@ export default function HeroSection() {
       <div className="relative isolate px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-44 sm:py-44 lg:py-48">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight dark:text-[--textPrimary] sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-[--textPrimary] sm:text-6xl">
               Cámara Latinoamericana del Litio (Calbamerica)
             </h1>
-            <p className="mt-6 text-lg leading-8 dark:text-[--textSecondary]">
+            <p className="mt-6 text-lg leading-8 text-[--textSecondary]">
               Buscamos Proyectar una transparente definición del precio del
               litio totalmente limpio, con la facultad de formador el precios,
               Índice de Litio y modelos de contratos presentes y futuros.
