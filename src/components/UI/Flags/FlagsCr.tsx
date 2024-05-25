@@ -88,7 +88,7 @@ export default function FlagsCr() {
   const [isCardExpanded, setIsCardExpanded] = useState(false);
 
   return (
-    <div className="mx-auto mt-12 grid max-w-lg grid-cols-1 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <div className="mx-auto mt-12 grid max-w-lg grid-cols-1 items-center justify-center">
       <MagicCard
         isCardExpanded={isCardExpanded}
         onBackgroundFadeClick={() => setIsCardExpanded(false)}
@@ -121,7 +121,7 @@ export default function FlagsCr() {
               Asociado Costa Rica
             </h3>
 
-            {/* Icono expandido */}
+            {/* Icono svg */}
             <button
               style={{ position: "absolute", right: 0, zIndex: 9999 }}
               onClick={() => setIsCardExpanded(!isCardExpanded)}
@@ -142,7 +142,7 @@ export default function FlagsCr() {
               </svg>
             </button>
           </div>
-          {/* Contenedor flags */}
+          {/* Contenedor flags expandido */}
           <div style={{ overflowY: "auto" }}>
             <img
               style={{
@@ -161,7 +161,7 @@ export default function FlagsCr() {
                   marginTop: "1.5rem",
                 }}
               >
-                {/* Imagenes de flags */}
+                {/* Imagenes flags */}
                 <img
                   className="max-h-12 w-full object-contain"
                   src="./chileFlag.svg"
