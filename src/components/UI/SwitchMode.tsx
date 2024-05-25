@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 import { useTheme } from "../../hook/useTheme";
 
 export const Switch = () => {
-  
-  const [theme, handleChange] = useTheme('dark')
+  const [theme, handleChange] = useTheme("dark");
 
   return (
     <div className="container-switch">

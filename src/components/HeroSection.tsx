@@ -2,10 +2,9 @@ import React from "react";
 import NavBar from "./UI/NavBar";
 
 export default function HeroSection() {
-
   return (
     <div className="">
-      <NavBar/>
+      <NavBar />
       {/* Hero Section */}
       <div className="relative isolate px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-44 sm:py-44 lg:py-48">
