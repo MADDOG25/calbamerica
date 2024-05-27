@@ -1,5 +1,6 @@
 @import url('./variables.css');
 @import url('./switch.css');
+@import url('@fontsource-variable/dm-sans');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +11,7 @@ html {
 }
 
 body {
+    font-family: 'DM Sans Variable', sans-serif;
     background-color: var(--bgPrimary);
     color: var(--textPrimary);
 }

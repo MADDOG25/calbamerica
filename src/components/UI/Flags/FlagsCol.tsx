@@ -115,7 +115,7 @@ export default function FlagsCol() {
             <h3
               style={{
                 fontWeight: 600,
-                fontSize: "1.4em",
+                fontSize: "1.2em",
               }}
             >
               Asociado Colombia

@@ -6,6 +6,7 @@ import FormSection from "./components/FormSection";
 import FounderSection from "./components/FounderSection";
 import TeamSection from "./components/TeamSection";
 import ContactSection from "./components/ContactSection";
+import FooterSection from "./components/FooterSection";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <FounderSection />
       <TeamSection />
       <ContactSection />
+      <FooterSection />
     </>
   );
 }

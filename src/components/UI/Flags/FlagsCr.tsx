@@ -115,7 +115,7 @@ export default function FlagsCr() {
             <h3
               style={{
                 fontWeight: 600,
-                fontSize: "1.4em",
+                fontSize: "1.2em",
               }}
             >
               Asociado Costa Rica
