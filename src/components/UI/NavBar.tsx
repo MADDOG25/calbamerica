@@ -10,20 +10,21 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { Switch } from "./SwitchMode";
+import { Link } from "react-scroll";
 
 const navigation = [
-  { name: "Inicio", href: "#" },
+  { name: "Inicio", href: "hero-section" },
   {
     name: "Acerca de",
     subItems: [
-      { name: "Asociados", href: "#" },
-      { name: "Servicio", href: "#" },
-      { name: "Formulario", href: "#" },
-      { name: "Equipo", href: "#" },
+      { name: "Asociados", href: "partners-section" },
+      { name: "Servicio", href: "service-section" },
+      { name: "Formulario", href: "form-section" },
+      { name: "Equipo", href: "team-section" },
     ],
   },
-  { name: "Fundador", href: "#" },
-  { name: "Contacto", href: "#" },
+  { name: "Fundador", href: "founder-section" },
+  { name: "Contacto", href: "contact-section" },
 ];
 
 export default function NavBar() {
@@ -79,13 +80,15 @@ export default function NavBar() {
                     <DisclosurePanel className="absolute left-0 mt-2 w-40 rounded-md bg-[--bgPrimary] shadow-lg ring-1 ring-[--accent] ring-opacity-10">
                       <div className="py-1">
                         {item.subItems.map((subItem) => (
-                          <a
+                          <Link
+                            to={subItem.href}
+                            smooth={true}
+                            duration={500}
                             key={subItem.name}
-                            href={subItem.href}
-                            className="block px-4 py-2 text-sm text-[--textPrimary] hover:text-[--textHoverMenu] hover:bg-[--accent]"
+                            className="cursor-pointer block px-4 py-2 text-sm text-[--textPrimary] hover:text-[--textHoverMenu] hover:bg-[--accent]"
                           >
                             {subItem.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </DisclosurePanel>
@@ -93,13 +96,15 @@ export default function NavBar() {
                 )}
               </Disclosure>
             ) : (
-              <a
+              <Link
+                to={item.href}
+                smooth={true}
+                duration={500}
                 key={item.name}
-                href={item.href}
-                className="text-md font-semibold leading-6 text-[--textPrimary] hover:text-[--textPrimary]"
+                className="cursor-pointer text-md font-semibold leading-6 text-[--textPrimary] hover:text-[--textPrimary]"
               >
                 {item.name}
-              </a>
+              </Link>
             )
           )}
         </div>
@@ -159,26 +164,30 @@ export default function NavBar() {
                           </DisclosureButton>
                           <DisclosurePanel className="mt-2 space-y-2 pl-6">
                             {item.subItems.map((subItem) => (
-                              <a
+                              <Link
+                                to={subItem.href}
+                                smooth={true}
+                                duration={500}
                                 key={subItem.name}
-                                href={subItem.href}
-                                className="block rounded-lg px-3 py-2 text-sm font-semibold leading-7 hover:bg-[--bgPrimary] text-[--textPrimary] hover:text-[--textHover]"
+                                className=" cursor-pointer block rounded-lg px-3 py-2 text-sm font-semibold leading-7 hover:bg-[--bgPrimary] text-[--textPrimary] hover:text-[--textHover]"
                               >
                                 {subItem.name}
-                              </a>
+                              </Link>
                             ))}
                           </DisclosurePanel>
                         </>
                       )}
                     </Disclosure>
                   ) : (
-                    <a
+                    <Link
+                      to={item.href}
+                      smooth={true}
+                      duration={500}
                       key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-[--textPrimary] hover:bg-[--bgPrimary] hover:text-[--textHover]"
+                      className="cursor-pointer -mx-3 block rounded-lg px-3 py-2 text-sm font-semibold leading-7 text-[--textPrimary] hover:bg-[--bgPrimary] hover:text-[--textHover]"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   )
                 )}
               </div>
