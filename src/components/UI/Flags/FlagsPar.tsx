@@ -84,7 +84,7 @@ function OpenFullscreenSvg() {
   );
 }
 
-export default function FlagsCr() {
+export default function FlagsPar() {
   const [isCardExpanded, setIsCardExpanded] = useState(false);
 
   return (
@@ -118,7 +118,7 @@ export default function FlagsCr() {
                 fontSize: "1.2em",
               }}
             >
-              Asociado Costa Rica
+              Asociado Paraguay
             </h3>
 
             {/* Icono svg */}
@@ -149,8 +149,8 @@ export default function FlagsCr() {
                 width: isCardExpanded ? "24rem" : "16rem",
                 height: "auto",
               }}
-              alt="Costa Rica Flag"
-              src="./costaricaFlag.svg"
+              alt="Paraguay Flag"
+              src="./paraguayFlag.svg"
             />
             {isCardExpanded && (
               <section
@@ -163,32 +163,25 @@ export default function FlagsCr() {
               >
                 {/* Imagenes flags */}
                 <img
-                  className="max-h-12 w-full object-contain"
-                  src="./chileFlag.svg"
-                  alt="Chile Flag"
+                  className="max-h-80 w-full object-contain "
+                  src="/partners/Paraguay/WhatsApp Image 2024-06-24 at 11.46.51 (12).jpeg"
+                  alt="imagen1"
                   width={180}
-                  height={60}
+                  height={80}
                 />
                 <img
-                  className="max-h-12 w-full object-contain"
-                  src="./argentinaFlag.svg"
-                  alt="Argentina Flag"
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Paraguay/WhatsApp Image 2024-06-24 at 11.46.51 (13).jpeg"
+                  alt="imagen2"
                   width={180}
-                  height={60}
+                  height={80}
                 />
                 <img
-                  className="max-h-12 w-full object-contain"
-                  src="./costaricaFlag.svg"
-                  alt="Costa Rica Flag"
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Paraguay/WhatsApp Image 2024-06-24 at 11.46.51 (15).jpeg"
+                  alt="imagen3"
                   width={180}
-                  height={60}
-                />
-                <img
-                  className="max-h-12 w-full object-contain"
-                  src="./brazilFlag.svg"
-                  alt="Brazil Flag"
-                  width={180}
-                  height={60}
+                  height={80}
                 />
               </section>
             )}
