@@ -48,11 +48,11 @@ export default function ContactSection() {
           </p>
           <a
             target="_blank"
-            href="mailto:prutigliano@calbamerica.org"
+            href="mailto:info@calbamerica.org"
             className="mt-2 flex gap-x-2 text-md leading-8 text-[--textSecondary] rounded-2xl px-4 bg-[--bgnavbar]"
           >
             <img src="/gmail.svg" width={20} height={20}></img>
-            prutigliano@calbamerica.org
+            info@calbamerica.org
           </a>
           <div className="grid grid-cols-1 mx-auto gap-x-4">
             <a
