@@ -9,7 +9,7 @@ export default function HeroSection() {
         <NavBar />
         {/* Video de fondo */}
         <video
-          className="absolute inset-0 w-full h-full object-cover -z-10 opacity-50"
+          className="absolute inset-0 w-full h-full object-cover -z-10 opacity-75"
           autoPlay
           muted
           loop
@@ -23,7 +23,7 @@ export default function HeroSection() {
               <h1 className="text-4xl font-bold tracking-tight text-[--textPrimary] sm:text-6xl">
                 Cámara Latinoamericana del Litio (Calbamerica)
               </h1>
-              <p className="mt-6 text-lg font-semibold leading-8 text-[--textSecondary]">
+              <p className="mt-6 text-lg font-bold leading-8 text-[--textPrimary]">
                 Buscamos Proyectar una transparente definición del precio del
                 litio totalmente limpio, con la facultad de formador el precios,
                 Índice de Litio y modelos de contratos presentes y futuros.

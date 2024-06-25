@@ -84,7 +84,7 @@ function OpenFullscreenSvg() {
   );
 }
 
-export default function FlagsAr() {
+export default function FlagsTaw() {
   const [isCardExpanded, setIsCardExpanded] = useState(false);
 
   return (
@@ -118,7 +118,7 @@ export default function FlagsAr() {
                 fontSize: "1.2em",
               }}
             >
-              Asociado Argentina
+              Asociado Taiwan
             </h3>
 
             {/* Icono svg */}
@@ -149,8 +149,8 @@ export default function FlagsAr() {
                 width: isCardExpanded ? "24rem" : "16rem",
                 height: "auto",
               }}
-              alt="Argentina Flag"
-              src="./argentinaFlag.svg"
+              alt="Taiwan Flag"
+              src="./taiwanFlag.svg"
             />
             {isCardExpanded && (
               <section
@@ -163,32 +163,88 @@ export default function FlagsAr() {
               >
                 {/* Imagenes flags */}
                 <img
-                  className="max-h-12 w-full object-contain"
-                  src="./chileFlag.svg"
-                  alt="Chile Flag"
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (1).jpeg"
+                  alt="imagen1"
                   width={180}
-                  height={60}
+                  height={80}
                 />
                 <img
-                  className="max-h-12 w-full object-contain"
-                  src="./argentinaFlag.svg"
-                  alt="Argentina Flag"
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (2).jpeg"
+                  alt="imagen2"
                   width={180}
-                  height={60}
+                  height={80}
                 />
                 <img
-                  className="max-h-12 w-full object-contain"
-                  src="./costaricaFlag.svg"
-                  alt="Costa Rica Flag"
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (3).jpeg"
+                  alt="imagen3"
                   width={180}
-                  height={60}
+                  height={80}
                 />
                 <img
-                  className="max-h-12 w-full object-contain"
-                  src="./brazilFlag.svg"
-                  alt="Brazil Flag"
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (4).jpeg"
+                  alt="imagen4"
                   width={180}
-                  height={60}
+                  height={80}
+                />
+                <img
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (5).jpeg"
+                  alt="imagen5"
+                  width={180}
+                  height={80}
+                />
+                <img
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (6).jpeg"
+                  alt="imagen6"
+                  width={180}
+                  height={80}
+                />
+                <img
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (7).jpeg"
+                  alt="imagen7"
+                  width={180}
+                  height={80}
+                />
+                <img
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (8).jpeg"
+                  alt="image8"
+                  width={180}
+                  height={80}
+                />
+                <img
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (9).jpeg"
+                  alt="imagen9"
+                  width={180}
+                  height={80}
+                />
+                <img
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (10).jpeg"
+                  alt="imagen10"
+                  width={180}
+                  height={80}
+                />
+                <img
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (11).jpeg"
+                  alt="imagen11"
+                  width={180}
+                  height={80}
+                />
+                <img
+                  className="max-h-80 w-full object-contain"
+                  src="/partners/Taiwan/WhatsApp Image 2024-06-24 at 11.46.51 (12).jpeg"
+                  alt="imagen12"
+                  width={180}
+                  height={80}
                 />
               </section>
             )}
