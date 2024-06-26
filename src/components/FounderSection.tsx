@@ -1,5 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
+import { AnimatedListDemo } from "./UI/AnimatedList";
 
 export default function FounderSection() {
   return (
@@ -26,7 +27,7 @@ export default function FounderSection() {
                   Litio e impulsando la creación de las demás Cámaras de Litio,
                   en los países con reservas de litio.
                 </p>
-                <div className="mt-6 flex items-center justify-center gap-x-6">
+                <div className="mt-6 flex flex-col gap-4 items-center justify-center gap-x-6">
                   <a
                     target="_blank"
                     href="https://www.linkedin.com/in/pablo-rutigliano-b6404820/"
@@ -34,6 +35,7 @@ export default function FounderSection() {
                   >
                     <img src="/linkedin.svg" width={30} height={30}></img>
                   </a>
+                  <AnimatedListDemo/>
                 </div>
               </div>
             </div>
