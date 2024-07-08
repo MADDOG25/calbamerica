@@ -96,14 +96,7 @@ export default function FlagsPar() {
       >
         {/* Contenedor */}
         <div
-          style={{
-            width: isCardExpanded ? "20rem" : "16rem",
-            gap: "2rem",
-            display: "flex",
-            flexDirection: "column",
-            padding: "1.8rem 0.5rem",
-            color: isCardExpanded ? "white" : "currentColor",
-          }}
+          className={`flex flex-col gap-8 p-7 ${isCardExpanded ? 'text-white' : ''} ${isCardExpanded ? 'w-40rem' : 'w-16rem'} sm:w-20rem`}
         >
           <div
             style={{
@@ -114,6 +107,8 @@ export default function FlagsPar() {
           >
             <h3
               style={{
+                margin: "0 auto",
+                paddingRight: "2rem",
                 fontWeight: 600,
                 fontSize: "1.2em",
               }}
@@ -146,6 +141,7 @@ export default function FlagsPar() {
           <div style={{ overflowY: "auto" }}>
             <img
               style={{
+                margin: "0 auto",
                 width: isCardExpanded ? "24rem" : "16rem",
                 height: "auto",
               }}
@@ -163,21 +159,21 @@ export default function FlagsPar() {
               >
                 {/* Imagenes flags */}
                 <img
-                  className="max-h-80 w-full object-contain "
+                  className="max-h-96 w-full object-contain "
                   src="/partners/Paraguay/WhatsApp Image 2024-06-24 at 11.46.51 (12).jpeg"
                   alt="imagen1"
                   width={180}
                   height={80}
                 />
                 <img
-                  className="max-h-80 w-full object-contain"
+                  className="max-h-96 w-full object-contain"
                   src="/partners/Paraguay/WhatsApp Image 2024-06-24 at 11.46.51 (13).jpeg"
                   alt="imagen2"
                   width={180}
                   height={80}
                 />
                 <img
-                  className="max-h-80 w-full object-contain"
+                  className="max-h-96 w-full object-contain"
                   src="/partners/Paraguay/WhatsApp Image 2024-06-24 at 11.46.51 (15).jpeg"
                   alt="imagen3"
                   width={180}
