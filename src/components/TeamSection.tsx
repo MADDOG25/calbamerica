@@ -3,38 +3,44 @@ import { Element } from "react-scroll";
 
 const people = [
   {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
+    name: "Lic Carlos Attias",
+    role: "Vicepresidente",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
+    name: "Dr Ricardo de Seta",
+    role: "Secretario",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
+    name: "Lic Claudio Barucca",
+    role: "Tesorero",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
+    name: "Ing Walter Muñoz",
+    role: "Director de Minas",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
+    name: "Dr Gustavo Esteban",
+    role: "Director de Capital Humano",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
   {
-    name: "Leslie Alexander",
-    role: "Co-Founder / CEO",
+    name: "Dr Gabriel Guevara",
+    role: "Director Institucional",
+    imageUrl:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+  {
+    name: "Pablo Roma",
+    role: "Prensa",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
@@ -58,16 +64,16 @@ export default function TeamSection() {
           {/* Cont Lead */}
           <div className="flex mt-6 flex-col gap-y-4 items-center justify-center gap-x-6">
             <img
-              className="h-22 w-22 rounded-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              className="h-60 w-60 rounded-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+              src="/img/pablo.jpeg"
               alt="Franco Rutigliano"
             />
             <div className="text-center">
               <h3 className="text-base font-semibold leading-7 tracking-tight text-[--textPrimary]">
-                Franco Rutigliano
+                Lic Pablo Rutigliano
               </h3>
               <p className="text-sm font-semibold leading-6 text-[--textSecondary]">
-                Fundador
+                Presidente & Fundador
               </p>
             </div>
           </div>
@@ -80,15 +86,15 @@ export default function TeamSection() {
               <li key={person.name}>
                 <div className="flex items-center justify-center flex-col md:gap-y-4 gap-x-6">
                   <img
-                    className="h-20 w-20 rounded-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
+                    className="h-28 w-28 rounded-2xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110"
                     src={person.imageUrl}
-                    alt=""
+                    alt="equipo de calbamerica"
                   />
                   <div>
-                    <h3 className="text-base font-semibold leading-7 tracking-tight text-[--textPrimary]">
+                    <h3 className="text-center text-base font-semibold leading-7 tracking-tight text-[--textPrimary]">
                       {person.name}
                     </h3>
-                    <p className="text-sm font-semibold leading-6 text-[--textSecondary]">
+                    <p className="text-center text-sm font-semibold leading-6 text-[--textSecondary]">
                       {person.role}
                     </p>
                   </div>
