@@ -7,6 +7,7 @@ export default function HeroSection() {
     <Element name="hero-section">
       <div className="relative">
         <NavBar />
+
         {/* Video de fondo */}
         <video
           className="absolute inset-0 w-full h-full object-cover -z-10 opacity-75"
@@ -16,29 +17,41 @@ export default function HeroSection() {
         >
           <source src="/video.mp4" type="video/mp4" />
         </video>
+
         {/* Hero Section */}
         <div className="relative isolate px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl py-28 sm:py-32 lg:py-32">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-[--textPrimary] sm:text-6xl">
-                Cámara Latinoamericana del Litio (Calbamerica)
-              </h1>
-              <p className="mt-6 text-lg font-bold leading-8 text-[--textPrimary]">
-                Buscamos Proyectar una transparente definición del precio del
-                litio totalmente limpio, con la facultad de formador el precios,
-                Índice de Litio y modelos de contratos presentes y futuros.
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <Link
-                  to="partners-section"
-                  smooth="true"
-                  duration={500}
-                  className="rounded-md px-2 py-2 shadow-sm bg-[--accent] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[--accent] cursor-pointer"
-                >
-                  <img src="/arrowdown.svg" width={25} height={25}></img>
-                </Link>
-              </div>
+          <div className="mx-auto max-w-2xl py-28 sm:py-32 lg:py-32 text-center">
+            {/* Atención - H1 SEO optimizado */}
+            <h1 className="text-4xl font-bold tracking-tight text-[--textPrimary] sm:text-6xl">
+              Impulsamos el Futuro del Litio Sustentable en Latinoamérica
+            </h1>
+
+            {/* Interés + Deseo */}
+            <p className="mt-6 text-lg leading-8 font-semibold text-[--textPrimary]">
+              En la Cámara Latinoamericana del Litio (Calbamerica), promovemos
+              la transparencia, sustentabilidad y liderazgo regional en la
+              formación de precios, contratos e índices del litio limpio.
+            </p>
+
+            {/* Acción */}
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link
+                to="partners-section"
+                smooth={true}
+                duration={500}
+                className="rounded-md px-4 py-3 text-sm font-semibold bg-[--accent] text-white hover:bg-[--accentHover] shadow-lg transition cursor-pointer"
+              >
+                Conoce nuestros aliados
+              </Link>
             </div>
+
+            {/* Meta Etiquetas invisibles para SEO */}
+            <p className="sr-only">
+              Calbamerica es una organización dedicada al desarrollo de
+              políticas transparentes para el mercado del litio en América
+              Latina, enfocándose en sostenibilidad, innovación y cooperación
+              internacional.
+            </p>
           </div>
         </div>
       </div>
